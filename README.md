@@ -1,10 +1,3 @@
-# Face Recognition Android App
-
-<a href="http://play.google.com/store/apps/details?id=com.lauszus.facerecognitionapp"><img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="Google Play" width="200px"/></a>
-
-#### Developed by Kristian Lauszus, 2016
-
-The code is released under the GNU General Public License.
 _________
 [![Build Status](https://travis-ci.org/Lauszus/FaceRecognitionApp.svg?branch=master)](https://travis-ci.org/Lauszus/FaceRecognitionApp)
 
