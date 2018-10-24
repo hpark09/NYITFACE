@@ -74,6 +74,12 @@ setx EIGEN3_DIR /path/to/eigen3
 echo %OPENCV_ANDROID_SDK% %EIGEN3_DIR%
 ```
 
+Fix To the 1st error( https://developer.android.com/ndk/guides/cpp-support) 
+c++_static
+
+Rest should work fine 
+Just make sure the paths are right 
+
 __Please note that ```/path/to/``` should be replaced with the actual path to the Eigen and OpenCV Android SDK directories.__
 
 If you have troubles setting the environmental variables, then you can just hardcode the paths in [settings.gradle](settings.gradle) and [Android.mk](app/src/main/cpp/Android.mk).
