@@ -15,7 +15,6 @@
  * Web      :  http://www.lauszus.com
  * e-mail   :  lauszus@gmail.com
  ******************************************************************************/
-
 #include <jni.h>
 #include <Eigen/Dense> // http://eigen.tuxfamily.org
 #include <opencv2/core.hpp>

@@ -52,9 +52,9 @@ public class SeekBarArrows extends LinearLayout implements SeekBar.OnSeekBarChan
         float max = styledAttrs.getFloat(R.styleable.SeekBarArrows_max, 0);
         nValues = styledAttrs.getInt(R.styleable.SeekBarArrows_n_values, 0);
 
-        mSeekBar = (SeekBar) findViewById(R.id.seekBar);
+        mSeekBar = findViewById(R.id.seekBar);
         ((TextView) findViewById(R.id.text)).setText(mSeekBarText);
-        mSeekBarValue = (TextView) findViewById(R.id.value);
+        mSeekBarValue = findViewById(R.id.value);
 
         setMax(max); // Set maximum value
         mSeekBar.setOnSeekBarChangeListener(this); // Set listener

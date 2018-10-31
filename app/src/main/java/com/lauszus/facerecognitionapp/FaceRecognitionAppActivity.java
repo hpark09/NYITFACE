@@ -284,16 +284,16 @@ public class FaceRecognitionAppActivity extends AppCompatActivity implements Cam
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         setContentView(R.layout.activity_face_recognition_app);
-        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        mToolbar = findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar); // Sets the Toolbar to act as the ActionBar for this Activity window
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, mToolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        final RadioButton mRadioButtonEigenfaces = (RadioButton) findViewById(R.id.eigenfaces);
-        final RadioButton mRadioButtonFisherfaces = (RadioButton) findViewById(R.id.fisherfaces);
+        final RadioButton mRadioButtonEigenfaces = findViewById(R.id.eigenfaces);
+        final RadioButton mRadioButtonFisherfaces = findViewById(R.id.fisherfaces);
 
         mRadioButtonEigenfaces.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -328,7 +328,7 @@ public class FaceRecognitionAppActivity extends AppCompatActivity implements Cam
 
         tinydb = new TinyDB(this); // Used to store ArrayLists in the shared preferences
 
-        mThresholdFace = (SeekBarArrows) findViewById(R.id.threshold_face);
+        mThresholdFace = findViewById(R.id.threshold_face);
         mThresholdFace.setOnSeekBarArrowsChangeListener(new SeekBarArrows.OnSeekBarArrowsChangeListener() {
             @Override
             public void onProgressChanged(float progress) {
@@ -338,7 +338,7 @@ public class FaceRecognitionAppActivity extends AppCompatActivity implements Cam
         });
         faceThreshold = mThresholdFace.getProgress(); // Get initial value
 
-        mThresholdDistance = (SeekBarArrows) findViewById(R.id.threshold_distance);
+        mThresholdDistance = findViewById(R.id.threshold_distance);
         mThresholdDistance.setOnSeekBarArrowsChangeListener(new SeekBarArrows.OnSeekBarArrowsChangeListener() {
             @Override
             public void onProgressChanged(float progress) {
@@ -348,7 +348,7 @@ public class FaceRecognitionAppActivity extends AppCompatActivity implements Cam
         });
         distanceThreshold = mThresholdDistance.getProgress(); // Get initial value
 
-        mMaximumImages = (SeekBarArrows) findViewById(R.id.maximum_images);
+        mMaximumImages = findViewById(R.id.maximum_images);
         mMaximumImages.setOnSeekBarArrowsChangeListener(new SeekBarArrows.OnSeekBarArrowsChangeListener() {
             @Override
             public void onProgressChanged(float progress) {
@@ -417,7 +417,7 @@ public class FaceRecognitionAppActivity extends AppCompatActivity implements Cam
             }
         });
 
-        mOpenCvCameraView = (CameraBridgeViewBase) findViewById(R.id.camera_java_surface_view);
+        mOpenCvCameraView = findViewById(R.id.camera_java_surface_view);
         mOpenCvCameraView.setCameraIndex(prefs.getInt("mCameraIndex", CameraBridgeViewBase.CAMERA_ID_FRONT));
         mOpenCvCameraView.setVisibility(SurfaceView.VISIBLE);
         mOpenCvCameraView.setCvCameraViewListener(this);
@@ -657,7 +657,7 @@ public class FaceRecognitionAppActivity extends AppCompatActivity implements Cam
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START))
             drawer.closeDrawer(GravityCompat.START);
         else

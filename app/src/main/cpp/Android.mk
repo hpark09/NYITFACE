@@ -7,7 +7,7 @@ ifndef OPENCV_ANDROID_SDK
 endif
 
 OPENCV_INSTALL_MODULES := on
-include $(OPENCV_ANDROID_SDK)/sdk/native/jni/OpenCV.mk
+include $(OPENCV_ANDROID_SDK)/native/jni/OpenCV.mk
 
 ifndef EIGEN3_DIR
   $(error Please specify environmental variable EIGEN3_DIR to Eigen 3 directory)
